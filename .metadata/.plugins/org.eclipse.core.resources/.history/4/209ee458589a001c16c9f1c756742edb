@@ -1,0 +1,31 @@
+
+class Order { 
+public void rotate(int[]value, int q) {
+    		if(q > value.length) 
+       			q=q%value.length;
+ 		int[] result = new int[value.length];
+ 		for(int i=0; i < q; i++){
+        			result[i] = value[value.length-k+i];
+ 		}
+ 		int j=0;
+    		for(int i=q; i<value.length; i++){
+        			result[i] = value[j];
+j++;
+    		}
+    		
+    			
+ 		System.arraycopy( result, 0, value, 0, value.length );
+}
+} 
+
+public class OrderStatistic
+{
+	public static void main(String[] args) {
+		Order r = new Order();
+        		int arr[] = { 1, 2, 3, 4, 5, 6, 7 }; 
+        		r.rotate(arr, 5); 
+        		for(int i=0;i<arr.length;i++){
+            			System.out.print(arr[i]+" ");
+        		}
+	}
+}
